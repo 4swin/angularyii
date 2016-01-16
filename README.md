@@ -1,17 +1,21 @@
-Simple quiz application using AngularJS and Yii
+<h1>Simple quiz application using AngularJS and Yii</h1>
 
-Requirements:
-Yii 1.1.x
-AngularJS 1.4.x
+<h3>Requirements</h3>
+<ul>
+	<li>Yii 1.1.x</li>
+	<li>AngularJS 1.4.x</li>
+</ul>
 
-Prerequisites:
-Pretty URL
+<h3>Prerequisites</h3>
+<ul>
+	<li>Pretty URL</li>
+</ul>
 
-<b>Pretty URL in Yii</b>
-========================
-
-1. Enable Apache's mod_rewrite
-2. Add the following block in the default Apache configuration file:
+<h3>Pretty URL in Yii</h3>
+<ol>
+	<li>Enable Apache's mod_rewrite
+	<li>
+	Add the following block in the default Apache configuration file:</br>
 	<VirtualHost *:80>
 		...
 		<Directory /var/www/html>
@@ -22,8 +26,10 @@ Pretty URL
 		</Directory>
 		...
 	</VirtualHost>
-3. Restart Apache
-4. Add .htaccess file in your app's root directory, add this lines:
+	</li>
+	<li>Restart Apache</li>
+	<li>
+	Add .htaccess file in your app's root directory, add this lines:<br>
 	RewriteEngine on
 
 	# if a directory or a file exists, use it directly
@@ -32,7 +38,9 @@ Pretty URL
 
 	# otherwise forward it to index.php
 	RewriteRule . index.php
-5. Uncomment/add the urlManager components in app/protected/config/main.php
+	</li>
+	<li>
+	Uncomment/add the urlManager components in app/protected/config/main.php<br>
 	'urlManager'=>array(
 		'urlFormat'=>'path',
 		'showScriptName'=>false,
@@ -42,10 +50,11 @@ Pretty URL
 			'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 		),
 	),
+	</li>
+</ol>
 
-
-<b>References</b>
-=================
-
-<a href="http://www.yiiframework.com/doc/guide/1.1/en/topics.url">URL Management</a>
-<a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-mod_rewrite-for-apache-on-ubuntu-14-04">Enabling mod_rewrite on Ubuntu 14.04</a>
+<h3>References</h3>
+<ol>
+<li><a href="http://www.yiiframework.com/doc/guide/1.1/en/topics.url">URL Management</a></li>
+<li><a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-mod_rewrite-for-apache-on-ubuntu-14-04">Enabling mod_rewrite on Ubuntu 14.04</a></li>
+</ol>
