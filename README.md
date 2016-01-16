@@ -16,16 +16,18 @@
 	<li>Enable Apache's mod_rewrite
 	<li>
 	Add the following block in the default Apache configuration file:</br>
-	<VirtualHost *:80>
-		...
-		<Directory /var/www/html>
-			Options Indexes FollowSymLinks MultiViews
-			AllowOverride All
-			Order allow,deny
-			allow from all
-		</Directory>
-		...
-	</VirtualHost>
+	<pre>
+		<VirtualHost *:80>
+			...
+			<Directory /var/www/html>
+				Options Indexes FollowSymLinks MultiViews
+				AllowOverride All
+				Order allow,deny
+				allow from all
+			</Directory>
+			...
+		</VirtualHost>
+	</pre>
 	</li>
 	<li>Restart Apache</li>
 	<li>
