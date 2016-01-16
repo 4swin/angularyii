@@ -17,6 +17,7 @@
 	<li>
 	Add the following block in the default Apache configuration file:</br>
 	<pre>
+	<code>
 		<VirtualHost *:80>
 			...
 			<Directory /var/www/html>
@@ -27,6 +28,7 @@
 			</Directory>
 			...
 		</VirtualHost>
+		</code>
 	</pre>
 	</li>
 	<li>Restart Apache</li>
