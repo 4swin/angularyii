@@ -34,6 +34,7 @@
 	<li>Restart Apache</li>
 	<li>
 	Add .htaccess file in your app's root directory, add this lines:<br>
+	<pre>
 	RewriteEngine on
 
 	# if a directory or a file exists, use it directly
@@ -42,9 +43,11 @@
 
 	# otherwise forward it to index.php
 	RewriteRule . index.php
+	</pre>
 	</li>
 	<li>
 	Uncomment/add the urlManager components in app/protected/config/main.php<br>
+	<pre>
 	'urlManager'=>array(
 		'urlFormat'=>'path',
 		'showScriptName'=>false,
@@ -54,6 +57,7 @@
 			'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 		),
 	),
+	</pre>
 	</li>
 </ol>
 
