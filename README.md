@@ -25,28 +25,28 @@
 ```
 3. Restart Apache's service
 4. Create .htaccess file in your app's root directory then add these lines:
-  ```
-  RewriteEngine on
+```
+RewriteEngine on
 
-  # if a directory or a file exists, use it directly
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
+# if a directory or a file exists, use it directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
 
-  # otherwise forward it to index.php
-  RewriteRule . index.php
-  ```
+# otherwise forward it to index.php
+RewriteRule . index.php
+```
 5. Uncomment/add the urlManager components in app/protected/config/main.php
-  ```
-  'urlManager'=>array(
-    'urlFormat'=>'path',
-    'showScriptName'=>false,
-    'rules'=>array(
-    '<controller:\w+>/<id:\d+>'=>'<controller>/view',
-    '<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
-    '<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
-    ),
+```
+'urlManager'=>array(
+  'urlFormat'=>'path',
+  'showScriptName'=>false,
+  'rules'=>array(
+  '<controller:\w+>/<id:\d+>'=>'<controller>/view',
+  '<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
+  '<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
   ),
-  ```
+),
+```
 
 ### REST API
 
