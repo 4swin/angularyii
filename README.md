@@ -11,18 +11,18 @@
 ### Pretty URL in Yii
 1. Enable Apache's mod_rewrite
 2. Add the following block in the default Apache configuration file:
-  ```
-  <VirtualHost *:80>
-    ...
-    <Directory /var/www/html>
-      Options Indexes FollowSymLinks MultiViews
-      AllowOverride All
-      Order allow,deny
-      allow from all
-    </Directory>
-    ...
-  </VirtualHost>
-  ```
+```
+<VirtualHost *:80>
+...
+  <Directory /var/www/html>
+    Options Indexes FollowSymLinks MultiViews
+    AllowOverride All
+    Order allow,deny
+    allow from all
+  </Directory>
+...
+</VirtualHost>
+```
 3. Restart Apache's service
 4. Create .htaccess file in your app's root directory then add these lines:
   ```
@@ -47,6 +47,7 @@
     ),
   ),
   ```
+
 ### REST API
 
 ### References
